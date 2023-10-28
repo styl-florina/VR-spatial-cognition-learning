@@ -1,0 +1,141 @@
+#include <c:\win32app\ustation\mdl\include\dlogbox.h>	/* system Resources */
+#include <c:\myMDLapp - chrysanthi#3\DCDdlg.h>		/* my Resources */
+
+#define OVERALLWIDTH     59*XC
+#define OVERALLHEIGHT    34*YC
+#define NEWLINE           2*YC
+
+#define X0    1*XC
+#define X1    2*XC
+#define X2    5*XC
+#define X3    9*XC
+#define X4    13*XC
+#define X5    25*XC
+#define X56   18*XC
+#define X6    21*XC
+#define X67   23*XC
+#define X7    25*XC
+#define X8    26*XC
+#define X9    29*XC
+#define X910  31*XC
+#define X10   34*XC
+#define X11   39*XC
+#define X12   40*XC
+#define XM    ((OVERALLWIDTH/2) - (5*XC))
+
+#define Y1    GENY(1)
+#define Y2    Y1+NEWLINE
+#define Y3    Y2+NEWLINE
+#define Y23   Y2+YC
+#define Y4    Y3+NEWLINE
+#define Y45   Y4+YC
+
+#define Y5    Y4+NEWLINE
+#define Y56   Y5+YC
+#define Y6    Y5+NEWLINE
+#define Y67    Y6+YC
+#define Y7    Y6+NEWLINE
+#define Y78  Y7+YC
+#define Y8   Y7+NEWLINE
+#define Y89  Y8+YC
+#define Y9   Y8+NEWLINE
+ 
+#define Y10  Y9+NEWLINE
+#define Y11  Y10+NEWLINE
+#define Y12  Y11+NEWLINE
+#define BW   XC*9
+
+DialogBoxRsc DIALOGID_FirstDialogBox = {
+    DIALOGATTR_DEFAULT, OVERALLWIDTH, OVERALLHEIGHT, NOHELP, MHELP, NOHOOK,  
+    NOPARENTID, 
+    "Recording DCD Motor Responses to Environmental Geometry", {
+    { {X5+XC, Y1+YC/2, BW, 0}, Text, TEXTID_FileName, ON, 0, "",""},   
+    { {X0+XC, Y3-YC, X9+XC/2, Y4-YC}, GroupBox, 0, ON, 0, "A. Settings", ""},
+    { {X1+XC, Y4-2*YC, 0, 0}, PushButton, PUSHBUTTONID_HeadMounted,         ON, 0, "",""},
+    { {X1+XC, Y5-2*YC, 0, 0}, PushButton, PUSHBUTTONID_VirtualCamera,   ON, 0, "",""},
+    { {X0+XC, Y6, X12+4*XC, Y4+3*YC}, GroupBox, 0, ON, 0, "B. Environmental Geometry", ""},
+    { {X0+2*XC, Y89+2*YC, 0, 0}, PushButton,PUSHBUTTONID_AnimationSoftware,ON,0, "",""},
+    { {X0+2*XC, Y78, 0, 0}, PushButton, PUSHBUTTONID_TrialCase,         ON, 0, "",""},
+    { {X0+2*XC, Y78-2*YC, 0, 0}, PushButton, PUSHBUTTONID_BoyGirl,   ON, 0, "",""},
+    { {X0+2*XC, Y89, 0, 0}, PushButton, PUSHBUTTONID_DisorderType,     ON, 0, "",""},
+    { {X0+10*XC, Y89+5*YC, 0, 0}, PushButton, PUSHBUTTONID_START,     ON, 0, "",""},
+    { {X0+XC, Y9+8*YC, X12, Y4-YC}, GroupBox, 0, ON, 0, "C. Recording", ""},
+    { {X1+XC, Y11+5*YC, 0, 0},PushButton,PUSHBUTTONID_RoutePathCompletion,ON,0, "",""},
+    { {X1+XC, Y11+7*YC, 0, 0}, PushButton, PUSHBUTTONID_TimeRecording, ON, 0, "",""},
+    { {X0+10*XC, Y11+10*YC, 0, 0}, PushButton, PUSHBUTTONID_STOP,     ON, 0, "",""}
+}
+};
+
+
+DItem_TextRsc TEXTID_FileName = {
+   NOCMD, LCMD, NOSYNONYM, NOHELP, MHELP, NOHOOK, NOARG,
+   12, "%s", "%s", "", "", NOMASK, CONCAT,
+   "Input Filename (Participants)",
+   ""
+};
+
+DItem_PushButtonRsc PUSHBUTTONID_HeadMounted = {
+   NOT_DEFAULT_BUTTON, NOHELP, MHELP, NOHOOK, NOARG,
+   NOCMD, MCMD, "",
+   "1. Head-mounted equipment" 
+};
+
+DItem_PushButtonRsc PUSHBUTTONID_VirtualCamera = {
+   NOT_DEFAULT_BUTTON, NOHELP, MHELP, NOHOOK, NOARG,
+   NOCMD, MCMD, "",
+   "2. Virtual Camera" 
+};
+
+DItem_PushButtonRsc PUSHBUTTONID_AnimationSoftware = {
+   NOT_DEFAULT_BUTTON, NOHELP, MHELP, NOHOOK, NOARG,
+   NOCMD, MCMD, "",
+   "Striped wall within the 3D symmetry arena" 
+};
+
+DItem_PushButtonRsc PUSHBUTTONID_TrialCase = {
+   NOT_DEFAULT_BUTTON, NOHELP, MHELP, NOHOOK, NOARG,
+   NOCMD, MCMD, "",
+   "Plain 3D symmetry setup" 
+};
+
+DItem_PushButtonRsc PUSHBUTTONID_BoyGirl = {
+   NOT_DEFAULT_BUTTON, NOHELP, MHELP, NOHOOK, NOARG,
+   NOCMD, MCMD, "",
+   "Plain 3D rectangular setup" 
+};
+
+
+
+
+
+
+DItem_PushButtonRsc PUSHBUTTONID_DisorderType = {
+   NOT_DEFAULT_BUTTON, NOHELP, MHELP, NOHOOK, NOARG,
+   NOCMD, MCMD, "",
+   "Striped wall within the 3D rectangular arena" 
+};
+
+DItem_PushButtonRsc PUSHBUTTONID_RoutePathCompletion = {
+   NOT_DEFAULT_BUTTON, NOHELP, MHELP, NOHOOK, NOARG,
+   NOCMD, MCMD, "",
+   "Route/Pathway completion? (Yes/No)" 
+};
+
+DItem_PushButtonRsc PUSHBUTTONID_TimeRecording = {
+   NOT_DEFAULT_BUTTON, NOHELP, MHELP, NOHOOK, NOARG,
+   NOCMD, MCMD, "",
+   "Time recording on termination (seconds)" 
+};
+
+DItem_PushButtonRsc PUSHBUTTONID_START = {
+   NOT_DEFAULT_BUTTON, NOHELP, MHELP, NOHOOK, NOARG,
+   NOCMD, MCMD, "",
+   "START (VR coord test)" 
+};
+
+DItem_PushButtonRsc PUSHBUTTONID_STOP = {
+   NOT_DEFAULT_BUTTON, NOHELP, MHELP, NOHOOK, NOARG,
+   NOCMD, MCMD, "",
+   "STOP (VR coord test)" 
+};
+

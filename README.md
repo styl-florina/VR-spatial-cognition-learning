@@ -1,5 +1,5 @@
 # VR-spatial-cognition-learning
- The compliling and linking processes, using the MDL development utilities, are supported by the following two batch files.
+ The compiling and linking processes, using the MDL development utilities, are supported by the following two batch files.
 
  Set.bat
  set MDL_COMP=-id:\the directory path (local hard disk)

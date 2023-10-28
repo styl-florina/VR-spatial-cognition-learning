@@ -1,13 +1,15 @@
 # VR-spatial-cognition-learning
  The compiling and linking processes, using the MDL development utilities, are supported by the following two batch files.
 
- Set.bat
+ (A) Set.bat
+ 
  set MDL_COMP=-id:\the directory path (local hard disk)
  set RSC_COMP=-id:\the directory path (local hard disk)
  set MS=The directory path (local hard disk)
  set ACE_DEV=The directory path (local hard disk)
 
- Build.bat
+ (B) Build.bat
+ 
  MicroStation Resource Compiler (creates DCDdlg.rsc)
  rcomp DCDdlg.r
 

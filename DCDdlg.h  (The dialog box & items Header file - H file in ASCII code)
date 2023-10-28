@@ -1,0 +1,15 @@
+
+#define DIALOGID_FirstDialogBox       		1
+
+#define TEXTID_FileName       			1
+
+#define PUSHBUTTONID_HeadMounted        	1
+#define PUSHBUTTONID_VirtualCamera      		2
+#define PUSHBUTTONID_AnimationSoftware  	3
+#define PUSHBUTTONID_TrialCase          		4
+#define PUSHBUTTONID_BoyGirl              		5
+#define PUSHBUTTONID_DisorderType         		6
+#define PUSHBUTTONID_RoutePathCompletion  	7
+#define PUSHBUTTONID_TimeRecording        	8
+#define PUSHBUTTONID_START    			9
+#define PUSHBUTTONID_STOP    			10
